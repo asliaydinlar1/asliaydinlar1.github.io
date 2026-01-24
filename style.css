@@ -1,0 +1,55 @@
+/* THE RESET - Removes browser defaults so we start fresh */
+* {
+    box-sizing: border-box; /* Makes sure padding doesn't break your layout */
+    margin: 0;
+    padding: 0;
+}
+
+/* BODY - The overall look of the page */
+body {
+    background-color: #ffffff; /* Sets background to pure white */
+    color: #000000;           /* Sets text to pure black */
+    font-family: "Times New Roman", Times, serif; /* The classic 90s font */
+    line-height: 1.5;        /* Adds space between lines for readability */
+    padding: 40px 20px;      /* Adds space around the edges on mobile */
+}
+
+/* WRAPPER - The container for your content */
+.wrapper {
+    max-width: 650px; /* Limits how wide the text goes (keeps it readable) */
+    margin: 0 auto;    /* Centers the content horizontally */
+}
+
+/* HEADINGS - Styles for titles */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+h2 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+/* LINKS - The classic blue/purple look */
+a {
+    color: #0000EE; /* Default browser blue */
+    text-decoration: underline; /* Keeps the classic underline */
+}
+
+a:visited {
+    color: #551A8B; /* Turns purple after you click it */
+}
+
+/* LISTS - Bullet point styling */
+ul {
+    margin-left: 30px; /* Indents the list */
+    margin-bottom: 20px;
+}
+
+/* HORIZONTAL RULE - That thin line look */
+hr {
+    border: 0;
+    border-top: 1px solid #000;
+    margin: 20px 0;
+}
