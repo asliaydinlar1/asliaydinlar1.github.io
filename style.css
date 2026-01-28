@@ -1,11 +1,11 @@
-/* MODERN ARCHIVE THEME */
+/* MODERN & NEAT ARCHIVE THEME */
 :root {
     --bg-color: #ffffff;
-    --text-color: #292929; /* Slightly off-black for less eye strain */
+    --text-color: #292929; 
     --accent-color: #3498db;
     --meta-color: #7f8c8d;
     --block-bg: #f8f9fa;
-    --max-width: 720px; /* Optimal line length for reading */
+    --max-width: 680px; /* Slightly narrower for a tighter, neater look */
 }
 
 * {
@@ -17,10 +17,11 @@
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
+    /* High-quality Serif stack for readability */
     font-family: 'Charter', 'Bitstream Charter', 'Sitka Text', Cambria, serif;
-    font-size: 20px; /* Larger modern base size */
+    font-size: 19px; 
     line-height: 1.6;
-    padding: 60px 20px;
+    padding: 40px 20px;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -29,92 +30,94 @@ body {
     margin: 0 auto;
 }
 
-/* TYPOGRAPHY */
+/* TYPOGRAPHY - "Neat" spacing adjustments */
 h1, h2, h3 {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     color: #1a1a1a;
     line-height: 1.2;
-    margin-bottom: 1rem;
 }
 
-h1 { font-size: 2.8rem; margin-top: 2rem; }
-h2 { font-size: 1.8rem; margin-top: 3rem; }
-h3 { font-size: 1.4rem; margin-top: 2rem; }
+h1 { 
+    font-size: 2.4rem; 
+    margin-bottom: 0.5rem; /* Reduced space below title */
+}
 
-p { margin-bottom: 1.5rem; }
+h2 { 
+    font-size: 1.5rem; 
+    margin-top: 1.5rem; /* Reduced top margin to pull text closer */
+    margin-bottom: 0.75rem; 
+}
 
-/* LINKS */
+p { 
+    margin-bottom: 1.2rem; 
+}
+
+/* LINKS - Tidy & Modern */
 a {
-    color: var(--text-color);
-    text-decoration: underline;
-    text-underline-offset: 3px;
-    transition: color 0.2s;
+    color: var(--accent-color);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(52, 152, 219, 0.3);
+    transition: all 0.2s;
 }
 
-a:hover { color: var(--accent-color); }
+a:hover { 
+    border-bottom: 1px solid var(--accent-color);
+    background-color: rgba(52, 152, 219, 0.05);
+}
 
 .back-link {
     font-family: sans-serif;
-    font-size: 0.9rem;
-    text-decoration: none;
+    font-size: 0.85rem;
     color: var(--meta-color);
-    display: block;
-    margin-bottom: 2rem;
+    border: none;
+    display: inline-block;
+    margin-bottom: 1.5rem;
 }
 
-/* ARTICLE SPECIFIC ELEMENTS */
-.meta {
-    color: var(--meta-color);
-    font-family: sans-serif;
-    font-size: 0.95rem;
-    margin-bottom: 2rem;
+/* BOXES - Fixed Font Size Problem */
+.assumptions_low, .assumptions, .formal-argument {
+    background: var(--block-bg);
+    padding: 1.5rem 2rem;
+    border-left: 3px solid #ddd;
+    margin: 1.5rem 0;
+    /* This ensures the font size matches the rest of the text */
+    font-size: 19px; 
+    border-radius: 4px;
 }
 
+.formal-argument {
+    background: #fffcf0;
+    border-left-color: #f39c12;
+}
+
+/* IMAGE STYLING */
 .header-image {
     width: 100%;
     height: auto;
-    border-radius: 8px;
-    margin: 2rem 0;
+    border-radius: 4px;
+    margin: 1.5rem 0 0.5rem 0;
 }
 
 .photo-credit {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     color: var(--meta-color);
     text-align: center;
-    margin-top: -1.5rem;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
-/* CALLOUT BOXES (Assumptions & Arguments) */
-.assumptions_low, .assumptions {
-    background: var(--block-bg);
-    padding: 2rem;
-    border-left: 4px solid var(--accent-color);
-    border-radius: 0 8px 8px 0;
-    margin: 2rem 0;
-    font-size: 0.95rem;
-}
-
-/* BUTTON */
-.button-container { margin: 4rem 0; text-align: center; }
-
-.email-button {
-    background: #1a1a1a;
-    color: white;
-    padding: 12px 24px;
-    text-decoration: none;
-    border-radius: 50px;
-    font-family: sans-serif;
-    font-size: 1rem;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.email-button:hover { background: var(--accent-color); color: white; }
-
+/* HR - Thin and subtle */
 hr {
     border: 0;
     border-top: 1px solid #eee;
-    margin: 3rem 0;
+    margin: 1.5rem 0;
+}
+
+/* LISTS */
+ul {
+    margin-left: 20px;
+    margin-bottom: 1.5rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
 }
