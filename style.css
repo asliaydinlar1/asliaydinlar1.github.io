@@ -1,215 +1,75 @@
-/* MODERN & NEAT ARCHIVE THEME */
-:root {
-    --bg-color: #ffffff;
-    --text-color: #1a1a1a;
-    --accent-color: #3498db;
-    --meta-color: #7f8c8d;
-    --block-bg: #f8f9fa;
-    --max-width: 680px;
-    --base-font-size: 19px; /* Standard size for everything */
-}
-
+/* RESET - Removes browser gaps */
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: none; /* Keeps font edges sharp and black */
+}
+
+:root {
+    --main-black: #000000;
 }
 
 body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    font-family: 'Charter', 'Bitstream Charter', 'Sitka Text', Cambria, serif;
-    font-size: var(--base-font-size);
-    line-height: 1.6;
-    padding: 40px 20px;
+    background-color: #ffffff;
+    color: var(--main-black);
+    /* Using a "Medium" weight font stack for a bolder black look */
+    font-family:  "Charter", "Bitstream Charter", "Sitka Text", Cambria, serif;
+    font-size: 19px;
+    line-height: 1.4; /* Tighter line height for a 'neat' look */
+    padding: 30px 20px;
 }
 
 .wrapper {
-    max-width: var(--max-width);
+    max-width: 650px;
     margin: 0 auto;
 }
 
-/* TIDY SPACING - Fixed the "too much emptiness" issue */
-h1 { 
-    font-size: 2.4rem; 
-    margin-bottom: 0.2rem; /* Very close to the line */
+/* TYPOGRAPHY - Deep Black */
+h1, h2, h3, p, li, a {
+    color: var(--main-black) !important;
+    font-weight: 500; /* Makes the black appear more solid */
 }
 
-h2 { 
-    font-size: 1.5rem; 
-    margin-top: 1.2rem; /* Brought closer to previous section */
-    margin-bottom: 0.5rem; 
+h1 {
+    font-size: 2.2rem;
+    margin-bottom: 5px; /* Brings the HR closer */
 }
 
-p { margin-bottom: 1rem; }
+h2 {
+    font-size: 1.4rem;
+    margin-top: 15px; /* Reduced top gap */
+    margin-bottom: 5px; /* Reduced bottom gap */
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
 
+p, ul {
+    margin-bottom: 10px;
+}
+
+/* TIGHT HORIZONTAL LINES */
 hr {
     border: 0;
-    border-top: 1px solid #eeeeee;
-    margin: 1rem 0; /* Reduced from 20px/50px to look tighter */
-}
-
-/* FONT SIZE FIX - Ensures these boxes match the rest of the text */
-.assumptions_low, .assumptions, .formal-argument {
-    background: var(--block-bg);
-    padding: 1.5rem;
-    border-left: 3px solid var(--accent-color);
-    margin: 1.5rem 0;
-    font-size: var(--base-font-size); /* Matches body text exactly */
-    border-radius: 4px;
-}
-
-.assumptions_low p, .assumptions p {
-    margin-bottom: 8px;
-    font-size: inherit; /* Forces child paragraphs to stay at 19px */
+    border-top: 2px solid var(--main-black); /* Thicker black line */
+    margin: 5px 0 15px 0; /* Tight spacing around the line */
 }
 
 /* LINKS */
 a {
-    color: var(--text-color);
-    text-decoration: none;
-    border-bottom: 1px solid rgba(0,0,0,0.1);
-    transition: all 0.2s;
+    text-decoration: underline;
+    text-underline-offset: 2px;
 }
 
 a:hover {
-    color: var(--accent-color);
-    border-bottom-color: var(--accent-color);
+    background-color: #eeeeee;
 }
 
-.back-link {
-    font-size: 0.9rem;
-    color: var(--meta-color);
-    border: none;
-    display: block;
-    margin-bottom: 1rem;
+/* ARTICLE SPECIFIC BOXES */
+.assumptions_low, .assumptions {
+    background: #fcfcfc;
+    padding: 15px;
+    border: 1px solid var(--main-black); /* Neat thin box */
+    margin: 15px 0;
+    font-size: 19px; /* Fixed font size for points A, B, C */
 }
-
-.meta {
-    color: var(--meta-color);
-    font-style: italic;
-    font-size: 0.9rem;
-    margin-bottom: 1.5rem;
-}/* MODERN & NEAT ARCHIVE THEME */
-:root {
-    --bg-color: #ffffff;
-    --text-color: #292929; 
-    --accent-color: #3498db;
-    --meta-color: #7f8c8d;
-    --block-bg: #f8f9fa;
-    --max-width: 680px; /* Slightly narrower for a tighter, neater look */
-}
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    /* High-quality Serif stack for readability */
-    font-family: 'Charter', 'Bitstream Charter', 'Sitka Text', Cambria, serif;
-    font-size: 19px; 
-    line-height: 1.6;
-    padding: 40px 20px;
-    -webkit-font-smoothing: antialiased;
-}
-
-.wrapper {
-    max-width: var(--max-width);
-    margin: 0 auto;
-}
-
-/* TYPOGRAPHY - "Neat" spacing adjustments */
-h1, h2, h3 {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    color: #1a1a1a;
-    line-height: 1.2;
-}
-
-h1 { 
-    font-size: 2.4rem; 
-    margin-bottom: 0.5rem; /* Reduced space below title */
-}
-
-h2 { 
-    font-size: 1.5rem; 
-    margin-top: 1.5rem; /* Reduced top margin to pull text closer */
-    margin-bottom: 0.75rem; 
-}
-
-p { 
-    margin-bottom: 1.2rem; 
-}
-
-/* LINKS - Tidy & Modern */
-a {
-    color: var(--accent-color);
-    text-decoration: none;
-    border-bottom: 1px solid rgba(52, 152, 219, 0.3);
-    transition: all 0.2s;
-}
-
-a:hover { 
-    border-bottom: 1px solid var(--accent-color);
-    background-color: rgba(52, 152, 219, 0.05);
-}
-
-.back-link {
-    font-family: sans-serif;
-    font-size: 0.85rem;
-    color: var(--meta-color);
-    border: none;
-    display: inline-block;
-    margin-bottom: 1.5rem;
-}
-
-/* BOXES - Fixed Font Size Problem */
-.assumptions_low, .assumptions, .formal-argument {
-    background: var(--block-bg);
-    padding: 1.5rem 2rem;
-    border-left: 3px solid #ddd;
-    margin: 1.5rem 0;
-    /* This ensures the font size matches the rest of the text */
-    font-size: 19px; 
-    border-radius: 4px;
-}
-
-.formal-argument {
-    background: #fffcf0;
-    border-left-color: #f39c12;
-}
-
-/* IMAGE STYLING */
-.header-image {
-    width: 100%;
-    height: auto;
-    border-radius: 4px;
-    margin: 1.5rem 0 0.5rem 0;
-}
-
-.photo-credit {
-    font-size: 0.75rem;
-    color: var(--meta-color);
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-/* HR - Thin and subtle */
-hr {
-    border: 0;
-    border-top: 1px solid #eee;
-    margin: 1.5rem 0;
-}
-
-/* LISTS */
-ul {
-    margin-left: 20px;
-    margin-bottom: 1.5rem;
-}
-
-li {
-    margin-bottom: 0.5rem;
-}  
