@@ -1,55 +1,120 @@
-/* THE RESET - Removes browser defaults so we start fresh */
+/* MODERN ARCHIVE THEME */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #292929; /* Slightly off-black for less eye strain */
+    --accent-color: #3498db;
+    --meta-color: #7f8c8d;
+    --block-bg: #f8f9fa;
+    --max-width: 720px; /* Optimal line length for reading */
+}
+
 * {
-    box-sizing: border-box; /* Makes sure padding doesn't break your layout */
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-/* BODY - The overall look of the page */
 body {
-    background-color: #ffffff; /* Sets background to pure white */
-    color: #000000;           /* Sets text to pure black */
-    font-family: "Times New Roman", Times, serif; /* The classic 90s font */
-    line-height: 1.5;        /* Adds space between lines for readability */
-    padding: 40px 20px;      /* Adds space around the edges on mobile */
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Charter', 'Bitstream Charter', 'Sitka Text', Cambria, serif;
+    font-size: 20px; /* Larger modern base size */
+    line-height: 1.6;
+    padding: 60px 20px;
+    -webkit-font-smoothing: antialiased;
 }
 
-/* WRAPPER - The container for your content */
 .wrapper {
-    max-width: 650px; /* Limits how wide the text goes (keeps it readable) */
-    margin: 0 auto;    /* Centers the content horizontally */
+    max-width: var(--max-width);
+    margin: 0 auto;
 }
 
-/* HEADINGS - Styles for titles */
-h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
+/* TYPOGRAPHY */
+h1, h2, h3 {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #1a1a1a;
+    line-height: 1.2;
+    margin-bottom: 1rem;
 }
 
-h2 {
-    margin-top: 30px;
-    margin-bottom: 10px;
-}
+h1 { font-size: 2.8rem; margin-top: 2rem; }
+h2 { font-size: 1.8rem; margin-top: 3rem; }
+h3 { font-size: 1.4rem; margin-top: 2rem; }
 
-/* LINKS - The classic blue/purple look */
+p { margin-bottom: 1.5rem; }
+
+/* LINKS */
 a {
-    color: #0000EE; /* Default browser blue */
-    text-decoration: underline; /* Keeps the classic underline */
+    color: var(--text-color);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color 0.2s;
 }
 
-a:visited {
-    color: #551A8B; /* Turns purple after you click it */
+a:hover { color: var(--accent-color); }
+
+.back-link {
+    font-family: sans-serif;
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: var(--meta-color);
+    display: block;
+    margin-bottom: 2rem;
 }
 
-/* LISTS - Bullet point styling */
-ul {
-    margin-left: 30px; /* Indents the list */
-    margin-bottom: 20px;
+/* ARTICLE SPECIFIC ELEMENTS */
+.meta {
+    color: var(--meta-color);
+    font-family: sans-serif;
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
 }
 
-/* HORIZONTAL RULE - That thin line look */
+.header-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 2rem 0;
+}
+
+.photo-credit {
+    font-size: 0.8rem;
+    color: var(--meta-color);
+    text-align: center;
+    margin-top: -1.5rem;
+    margin-bottom: 3rem;
+}
+
+/* CALLOUT BOXES (Assumptions & Arguments) */
+.assumptions_low, .assumptions {
+    background: var(--block-bg);
+    padding: 2rem;
+    border-left: 4px solid var(--accent-color);
+    border-radius: 0 8px 8px 0;
+    margin: 2rem 0;
+    font-size: 0.95rem;
+}
+
+/* BUTTON */
+.button-container { margin: 4rem 0; text-align: center; }
+
+.email-button {
+    background: #1a1a1a;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-family: sans-serif;
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.email-button:hover { background: var(--accent-color); color: white; }
+
 hr {
     border: 0;
-    border-top: 1px solid #000;
-    margin: 20px 0;
+    border-top: 1px solid #eee;
+    margin: 3rem 0;
 }
