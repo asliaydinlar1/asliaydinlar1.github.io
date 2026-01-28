@@ -1,94 +1,86 @@
-
-/* MODERN & NEAT ARCHIVE THEME */
-:root {
-    --bg-color: #ffffff;
-    --text-color: #1a1a1a;
-    --accent-color: #3498db;
-    --meta-color: #7f8c8d;
-    --block-bg: #f8f9fa;
-    --max-width: 680px;
-    --base-font-size: 19px; /* Standard size for everything */
-}
-
+/* MODERN ARCHIVE - TIGHT & DARK VERSION */
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-black: #000000;
 }
 
 body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
+    background-color: #ffffff;
+    color: var(--main-black);
+    /* High-readability serif font */
     font-family: 'Charter', 'Bitstream Charter', 'Sitka Text', Cambria, serif;
-    font-size: var(--base-font-size);
-    line-height: 1.6;
+    font-size: 19px;
+    line-height: 1.5;
     padding: 40px 20px;
 }
 
 .wrapper {
-    max-width: var(--max-width);
+    max-width: 650px;
     margin: 0 auto;
 }
 
-/* TIDY SPACING - Fixed the "too much emptiness" issue */
-h1 { 
-    font-size: 2.4rem; 
-    margin-bottom: 0.2rem; /* Very close to the line */
+/* TYPOGRAPHY - Making sure everything is pure black */
+h1, h2, h3, p, li, a {
+    color: var(--main-black) !important;
 }
 
-h2 { 
-    font-size: 1.5rem; 
-    margin-top: 1.2rem; /* Brought closer to previous section */
-    margin-bottom: 0.5rem; 
+h1 {
+    font-size: 2.4rem;
+    margin-bottom: 2px; /* Pulls the HR very close */
+    font-weight: 700;
 }
 
-p { margin-bottom: 1rem; }
+h2 {
+    font-size: 1.4rem;
+    margin-top: 1.2rem; /* Reduced space above headers */
+    margin-bottom: 0.4rem; /* Reduced space below headers */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
 
+p, ul {
+    margin-bottom: 0.8rem; /* Tighter paragraph spacing */
+}
+
+ul {
+    margin-left: 20px;
+}
+
+li {
+    margin-bottom: 4px;
+}
+
+/* HORIZONTAL RULE - Darker and tighter */
 hr {
     border: 0;
-    border-top: 1px solid #eeeeee;
-    margin: 1rem 0; /* Reduced from 20px/50px to look tighter */
-}
-
-/* FONT SIZE FIX - Ensures these boxes match the rest of the text */
-.assumptions_low, .assumptions, .formal-argument {
-    background: var(--block-bg);
-    padding: 1.5rem;
-    border-left: 3px solid var(--accent-color);
-    margin: 1.5rem 0;
-    font-size: var(--base-font-size); /* Matches body text exactly */
-    border-radius: 4px;
-}
-
-.assumptions_low p, .assumptions p {
-    margin-bottom: 8px;
-    font-size: inherit; /* Forces child paragraphs to stay at 19px */
+    border-top: 2px solid var(--main-black);
+    margin: 0 0 1rem 0;
 }
 
 /* LINKS */
 a {
-    color: var(--text-color);
-    text-decoration: none;
-    border-bottom: 1px solid rgba(0,0,0,0.1);
-    transition: all 0.2s;
+    text-decoration: underline;
+    text-underline-offset: 3px;
 }
 
 a:hover {
-    color: var(--accent-color);
-    border-bottom-color: var(--accent-color);
+    color: #3498db !important;
 }
 
-.back-link {
-    font-size: 0.9rem;
-    color: var(--meta-color);
-    border: none;
-    display: block;
-    margin-bottom: 1rem;
+/* ARTICLE FIX - Ensures points A, B, C are standard size */
+.assumptions_low, .assumptions, .formal-argument {
+    background: #fcfcfc;
+    padding: 1.2rem;
+    border-left: 3px solid var(--main-black);
+    margin: 1.2rem 0;
+    font-size: 19px; /* This fixes the "smaller font" problem */
 }
 
-.meta {
-    color: var(--meta-color);
-    font-style: italic;
-    font-size: 0.9rem;
-    margin-bottom: 1.5rem;
+.assumptions_low p, .assumptions p {
+    margin-bottom: 5px;
+    font-size: 19px;
 }
