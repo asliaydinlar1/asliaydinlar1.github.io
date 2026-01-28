@@ -242,3 +242,24 @@ li {
 .email-button:hover {
     background-color: #2457a0;
 }
+/* 1. First, tell the wrapper it is the 'parent' for floating items */
+.wrapper {
+    max-width: 650px;
+    margin: 0 auto;
+    position: relative; /* This is the key! */
+}
+
+/* 2. Style the GIF to float */
+.floating-gif {
+    position: absolute; /* Takes it 'out' of the text layer */
+    
+    /* Position it where you want relative to the wrapper */
+    top: 50px;    /* 50px from the top of the wrapper */
+    right: -80px; /* Moves it into the margin so it doesn't block text */
+    
+    width: 100px; /* Control the size */
+    z-index: 99;  /* Ensures it stays on TOP of everything else */
+    
+    pointer-events: none; /* Optional: allows you to click 'through' the gif to the text/links below */
+    opacity: 0.8;         /* Optional: makes it slightly see-through */
+}
