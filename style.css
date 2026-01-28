@@ -1,88 +1,94 @@
 
-/* MODERN ARCHIVE - TIGHT & DEEP BLACK */
+/* MODERN & NEAT ARCHIVE THEME */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #1a1a1a;
+    --accent-color: #3498db;
+    --meta-color: #7f8c8d;
+    --block-bg: #f8f9fa;
+    --max-width: 680px;
+    --base-font-size: 19px; /* Standard size for everything */
+}
+
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    /* Keeps text sharp and dark */
-    -webkit-font-smoothing: antialiased;
 }
 
 body {
-    background-color: #ffffff;
-    color: #000000; /* Deep Black */
+    background-color: var(--bg-color);
+    color: var(--text-color);
     font-family: 'Charter', 'Bitstream Charter', 'Sitka Text', Cambria, serif;
-    font-size: 19px;
-    line-height: 1.45; /* Tighter line spacing */
-    padding: 30px 20px;
+    font-size: var(--base-font-size);
+    line-height: 1.6;
+    padding: 40px 20px;
 }
 
 .wrapper {
-    max-width: 650px;
+    max-width: var(--max-width);
     margin: 0 auto;
 }
 
-/* TYPOGRAPHY */
-h1, h2, h3, p, li {
-    color: #000000 !important;
+/* TIDY SPACING - Fixed the "too much emptiness" issue */
+h1 { 
+    font-size: 2.4rem; 
+    margin-bottom: 0.2rem; /* Very close to the line */
 }
 
-h1 {
-    font-size: 2.3rem;
-    margin-bottom: 2px;
-    font-weight: 700;
+h2 { 
+    font-size: 1.5rem; 
+    margin-top: 1.2rem; /* Brought closer to previous section */
+    margin-bottom: 0.5rem; 
 }
 
-h2 {
-    font-size: 1.4rem;
-    margin-top: 1.2rem;
-    margin-bottom: 0.4rem;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    font-weight: 600;
-}
+p { margin-bottom: 1rem; }
 
-p, ul {
-    margin-bottom: 0.8rem;
-}
-
-ul {
-    margin-left: 20px;
-}
-
-li {
-    margin-bottom: 4px;
-}
-
-/* NEW LINK COLOR - Professional Muted Blue */
-a {
-    color: #2457a0 !important; /* Distinct blue color */
-    text-decoration: underline;
-    text-underline-offset: 3px;
-    transition: color 0.2s;
-}
-
-a:hover {
-    color: #000000 !important; /* Turns black when you hover over it */
-}
-
-/* HORIZONTAL RULE */
 hr {
     border: 0;
-    border-top: 2px solid #000000;
-    margin: 0 0 1rem 0;
+    border-top: 1px solid #eeeeee;
+    margin: 1rem 0; /* Reduced from 20px/50px to look tighter */
 }
 
-/* ARTICLE BOXES (Points A, B, C) */
+/* FONT SIZE FIX - Ensures these boxes match the rest of the text */
 .assumptions_low, .assumptions, .formal-argument {
-    background: #fcfcfc;
-    padding: 1.2rem;
-    border-left: 3px solid #000000;
-    margin: 1.2rem 0;
-    font-size: 19px; /* Fixed: keeps font same size as body */
+    background: var(--block-bg);
+    padding: 1.5rem;
+    border-left: 3px solid var(--accent-color);
+    margin: 1.5rem 0;
+    font-size: var(--base-font-size); /* Matches body text exactly */
+    border-radius: 4px;
 }
 
 .assumptions_low p, .assumptions p {
-    margin-bottom: 5px;
-    font-size: 19px;
-    color: #000000 !important;
+    margin-bottom: 8px;
+    font-size: inherit; /* Forces child paragraphs to stay at 19px */
+}
+
+/* LINKS */
+a {
+    color: var(--text-color);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    transition: all 0.2s;
+}
+
+a:hover {
+    color: var(--accent-color);
+    border-bottom-color: var(--accent-color);
+}
+
+.back-link {
+    font-size: 0.9rem;
+    color: var(--meta-color);
+    border: none;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.meta {
+    color: var(--meta-color);
+    font-style: italic;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
 }
